@@ -6,6 +6,7 @@ const SavedFiles = () => {
   // State variables for managing files and the selected file's content
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState('');
+ 
 
   // Function to handle file selection and display its content
   const selectorHandle = (fileName) => {
@@ -45,7 +46,7 @@ const SavedFiles = () => {
           </ul>
         </div>
         <div className={styles.right}>
-         <textarea value={selectedFile ? selectedFile : 'no data to display'} disabled></textarea>
+         <textarea value={files.length>0 ? selectedFile : 'no data to display'} disabled></textarea>
            {/* Display the content of the selected file */}
         </div>
       </div>

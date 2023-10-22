@@ -107,10 +107,10 @@ export default function FormDialog(props) {
             />
           )}
         </DialogContent>
-        <DialogActions>
+       {!isSaved && <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSave}>Save</Button>
-        </DialogActions>
+          <Button onClick={handleSave}>Save</Button> 
+        </DialogActions>}
       </Dialog>
     </div>
   );
